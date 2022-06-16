@@ -13,16 +13,25 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random quote to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomQuote() {
+  const quotes =
+      ['About 99% of the time, the right time is right now.', 
+        'Dont ever work for someone you dont want to become.',        
+        'Anything you say before the word “but” does not count.',
+        'When you forgive others, they may not notice, but you will heal. Forgiveness is not something we do for others; it is a gift to ourselves.',  
+        'Efficiency is highly overrated; Goofing off is highly underrated. Regularly scheduled sabbaths, sabbaticals, vacations, breaks, aimless walks and time off are essential for top performance of any kind. The best work ethic requires a good rest ethic.',
+        'When you lead, your real job is to create more leaders, not more followers.',
+        'Criticize generally, compliment specifically',
+        'Life lessons will be presented to you in the order they are needed. Everything you need to master the lesson is within you. Once you have truly learned a lesson, you will be presented with the next one. If you are alive, that means you still have lessons to learn.',
+        'It is the duty of a student to get everything out of a teacher, and the duty of a teacher to get everything out of a student.',
+        ];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  // Pick a random quote.
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const quoteContainer = document.getElementById('quote-container');
+  quoteContainer.innerText = quote;
 }
