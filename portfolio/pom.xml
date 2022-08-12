@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.google.sps</groupId>
-  <artifactId>portfolio</artifactId>
+  <artifactId>image-upload-analyzer</artifactId>
   <version>1</version>
 
   <properties>
@@ -37,6 +37,20 @@
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-annotations</artifactId>
       <version>${jetty.version}</version>
+    </dependency>
+
+    <!-- Cloud Storage -->
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-storage</artifactId>
+      <version>1.113.0</version>
+    </dependency>
+
+    <!-- Cloud Vision -->
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-vision</artifactId>
+      <version>1.100.0</version>
     </dependency>
   </dependencies>
 
@@ -83,7 +97,7 @@
               <filters>
                 <filter>
                   <artifact>*:*</artifact>
-                  <!-- Some libraries are signed, so exclude signature files from the output jar. -->
+                  <!-- The Cloud Vision library is signed, so exclude signature files from the output jar. -->
                   <excludes>
                     <exclude>META-INF/*.SF</exclude>
                     <exclude>META-INF/*.DSA</exclude>
