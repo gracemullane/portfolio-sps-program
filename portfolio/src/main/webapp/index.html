@@ -2,18 +2,110 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Grace Mullane</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <video class="video" autoplay muted>
+            <source src="joris_schaap--bee_in_ultra_slow_motion.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+      </video>
+      <h1>Grace Mullane</h1>
+      <p>Portfolio | 2022 </p>
+      <p> “The longer I live, the more beautiful life becomes." -Frank Lloyd Wright </p>
+      <a class="link-color" href= https://www.linkedin.com/in/gracemullane/>LinkedIn</a>
+      <a class="link-color" href= https://github.com/gracemullane/>GitHub</a>
+      <a> Resume </a>
+
+      <!-- <p><a href="/hello">Click to see message by created by server!</a>
+      <button class="button-62" onclick="addRandomQuote();">Quote</button>
+      <form action="/form-handler" method="POST">
+        <p>Contact form: </p>
+        <textarea name="text-input">Description</textarea>
+        <br/>
+        <input type="submit" class="button-62"/>
+    </form> -->
+
+    <h1>Server Date Example</h1>
+    <p>Click this button to see the server's current date.</p>
+    <button onclick="showServerTime();">
+      Get date
+    </button>
+    <p id="date-container"></p>
+    <p>Click <a href="/date">here</a> to see the server response directly.</p>
+
+    <!-- -->
+    <body>
+        <div id="content">
+          <h1>Server Stats</h1>
+          <p>Click here to add server statistics to this page:</p>
+          <button onclick="getServerStats()">Fetch server stats!</button>
+          <ul id="server-stats-container"></ul>
+          <p>Click <a href="/server-stats">here</a> to see the server response directly.</p>
+        </div>
+    <!-- -->
+
+    <h1>Text Processor</h1>
+
+    <form action="/text" method="POST">
+
+      <p>Enter a comma-separated list of words:</p>
+      <textarea name="text-input">one, two, three</textarea>
+      <br/><br/>
+
+      <p>Choose some options:</p>
+      <label>
+        <input type="checkbox" name="upper-case" value="true">
+        Upper-case
+      </label>
+      <br/>
+      <label>
+        <input type="checkbox" name="sort" value="true">
+        Alphabetize
+      </label>
+      <br/><br/>
+
+      <input type="submit" />
+    </form>
+
+    <!-- -->
+    
+    <h1>Intro to Post Requests</h1>
+
+    <p>This is a form that sends a POST request to the server:</p>
+    <form action="/form-handler2" method="POST">
+
+      <input type="text" name="name-input" placeholder="Your Name"/>
+      <br/><br/>
+
+      <select name="color-input">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+      </select>
+      <br/><br/>
+
+      <textarea name="description-input" placeholder="Your Description"></textarea>
+      <br/><br/>
+
+      <input type="submit"/>
+    </form>
+  
+    
+    <h1>Image Upload Analysis</h1>
+
+    <form action="/image-analysis" method="POST" enctype="multipart/form-data">
+      <p>Upload an image:</p>
+      <input type="file" name="image">
+      <br/><br/>
+      <button>Submit</button>
+    </form>
+ 
+
+        
     </div>
   </body>
 </html>
